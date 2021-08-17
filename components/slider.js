@@ -21,8 +21,10 @@ useEffect(()=>{
                     </div><div className="col-6 bg-light">
 
                 <div className="css-typing ">
-                            <h1 className="textTranslate" style={{color:"red"}}>moder power tools</h1>
-                            <button className="btn btn-warning">get start</button>
+                            <h1 className="textTranslate" style={{color:"black"}}>Power Tool Accessories</h1>
+                            <h2 className="textTranslate" style={{color:"#D72406"}}>Cordless Power Tool</h2>
+                    <p>Nullam dictum felis eu pede mollis pretium.<br/>Integer tincidunt. Cras dapi bus.<br/> Vivamus elementum semper nisi.</p>
+                            <button className="btn btn-warning">Shop Now</button>
                         </div>
                     </div>
 
@@ -33,10 +35,10 @@ useEffect(()=>{
                 <div className="row">
                     <div className="col-6 bg-light">
                         <div className="css-typing ">
-                            <h1 className="textTranslate" style={
-                                {color:"green"
-                                        }}>moder power tools</h1>
-                            <button className="btn btn-warning">get start</button>
+                            <h1 className="textTranslate" style={{color:"black"}}>Modern Power Tool</h1>
+                            <h2 className="textTranslate" style={{color:"#D72406"}}>Hardware Equipments &<br/>Accessories Shop!</h2>
+                            <p>Nullam dictum felis eu pede mollis pretium.<br/>Integer tincidunt. Cras dapi bus.<br/> Vivamus elementum semper nisi.</p>
+                            <button className="btn btn-warning">Shop Now</button>
                         </div>
                     </div>
                     <div className="col-6 bg-light">
@@ -48,11 +50,12 @@ useEffect(()=>{
                <div className=" carousel-inner__image">
                    <div className="row" >
                        <div className="imagenumber">
-                           <div className="container  bg-white position-absolute bg-opacity-75"style={{marginLeft:"10%",textAlign: "center !important" }}>
+                           <div className="container  bg-white position-absolute bg-opacity-75"style={{marginLeft:"10%",marginRight:"10%", textAlign: "center !important" }}>
                                <div className="css-typing p-5 ">
-                                   <h1 className="textTranslate" style={{color:"darkblue",marginLeft:"15%",marginBottom:"2%"}}>moder power tools</h1>
-                                   <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas , las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
-                                   <button className="btn btn-warning">get start</button>
+                                   <h1 className="textTranslate" style={{color:"black"}}>Modern Power Tool</h1>
+                                   <h2 className="textTranslate" style={{color:"#D72406"}}>Hardware Equipments &<br/>Accessories Shop!</h2>
+                                   <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt.<br/> Cras dapi bus. Vivamus elementum semper nisi.</p>
+                                   <button className="btn btn-warning">Shop Now</button>
                                </div>
                            </div>
 
