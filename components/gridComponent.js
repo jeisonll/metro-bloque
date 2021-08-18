@@ -25,7 +25,7 @@ export default function GridComponent(){
                     </div>
                     <div className="col-sm-7  ">
                         <div className="row">
-                            <div className="col-8 position-relative col-sm-6 bg-success  " id="imageGrid">
+                            <div className="col-8 position-relative col-sm-6 bg-success " id="imageGrid">
                                 <div className=""  style={{width: "18rem"}}>
                                     <div className="position-absolute"id="imageGrid" style={{paddingInlineStart:"50%",top:"0"}}>
                                         <img style={{width: "100%"}} src="https://cdn.shopify.com/s/files/1/0179/0453/3558/files/img1_400x.png"/>

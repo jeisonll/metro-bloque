@@ -9,7 +9,7 @@ export default function CardComponents(){
         <div>
             <h3 className="text-center ">FEATURED PRODUCTS</h3>
             <h2 className="text-center mb-4"><b >------------------------------</b></h2>
-            <div className="container  mt-2"style={{marginLeft:"9.5%",marginRight:"auto"}}>
+            <div className="container  mt-2"style={{marginLeft:"9.%",marginRight:"auto"}}>
                 <div className="row ">
                     <div className="col-3 text-center mb-5  " >
                         <div className="row " >
