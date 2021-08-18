@@ -33,7 +33,7 @@ export default function HeaderNavbar(){
                     <Nav className="mx-auto justify-content-center d-flex text-white table-hover">
                         <Nav.Link id="collasible-nav-dropdown" href="/movies">HOME</Nav.Link>
                         <div >
-                            <NavDropdown  title="CATALOG" id="collasible-nav-dropdown" show={isShown1} onMouseEnter={()=>setIsShown1(true)}  onMouseLeave={()=>setIsShown1(false)}>
+                            <NavDropdown  title="CATALOG" id="collasible-nav-dropdown"  style={{marginLeft:"30%"}}show={isShown1} onMouseEnter={()=>setIsShown1(true)}  onMouseLeave={()=>setIsShown1(false)}>
                                 <div className="row justify-content-center"  style={{width:"800px",position:"relative"}}>
                                         <div className="col-3">
                                             <NavDropdown.Item href="/adminGeders">Action11</NavDropdown.Item>
@@ -62,7 +62,7 @@ export default function HeaderNavbar(){
 
                             </NavDropdown>
                         </div>
-                        <NavDropdown  title="EQUIPMENTS" id="collasible-nav-dropdown" show={isShown2} onMouseEnter={()=>setIsShown2(true)}  onMouseLeave={()=>setIsShown2(false)}>
+                        <NavDropdown  title="EQUIPMENTS" id="collasible-nav-dropdown" style={{marginLeft:"8%"}} show={isShown2} onMouseEnter={()=>setIsShown2(true)}  onMouseLeave={()=>setIsShown2(false)}>
                             <div className="row justify-content-center" style={{width:"800px",position:"relative"}}>
                                 <div className="col-3">
                                     <NavDropdown.Item href="/adminGeders">Action11</NavDropdown.Item>
@@ -87,7 +87,7 @@ export default function HeaderNavbar(){
                                 </div>
                             </div>
                         </NavDropdown>
-                        <NavDropdown  title="HARDWARE" id="collasible-nav-dropdown" show={isShown3} onMouseEnter={()=>setIsShown3(true)}  onMouseLeave={()=>setIsShown3(false)}>
+                        <NavDropdown  title="HARDWARE" id="collasible-nav-dropdown" style={{marginLeft:"5%"}} show={isShown3} onMouseEnter={()=>setIsShown3(true)}  onMouseLeave={()=>setIsShown3(false)}>
                             <div className="row justify-content-center" style={{width:"800px",position:"relative"}}>
                                 <div className="col-3">
                                     <NavDropdown.Item href="/adminGeders">Action11</NavDropdown.Item>
@@ -112,7 +112,7 @@ export default function HeaderNavbar(){
                                 </div>
                             </div>
                         </NavDropdown>
-                        <NavDropdown  title="GEAR PULLER" id="collasible-nav-dropdown" show={isShown4} onMouseEnter={()=>setIsShown4(true)}  onMouseLeave={()=>setIsShown4(false)}>
+                        <NavDropdown  title="GEAR PULLER" id="collasible-nav-dropdown" style={{marginLeft:"5%"}} show={isShown4} onMouseEnter={()=>setIsShown4(true)}  onMouseLeave={()=>setIsShown4(false)}>
                             <div className="row justify-content-center" style={{width:"800px",position:"relative"}}>
                                 <div className="col-3">
                                     <NavDropdown.Item href="/adminGeders">Action11</NavDropdown.Item>
@@ -137,7 +137,7 @@ export default function HeaderNavbar(){
                                 </div>
                             </div>
                         </NavDropdown>
-                        <NavDropdown  title="MEASURING" id="collasible-nav-dropdown" show={isShown5} onMouseEnter={()=>setIsShown5(true)}  onMouseLeave={()=>setIsShown5(false)}>
+                        <NavDropdown  title="MEASURING" id="collasible-nav-dropdown" style={{marginLeft:"5%"}} show={isShown5} onMouseEnter={()=>setIsShown5(true)}  onMouseLeave={()=>setIsShown5(false)}>
                             <div className="row " style={{width:"800px",position:"relative",right:"50%"}}>
                                 <div className="col-3">
                                     <NavDropdown.Item href="/adminGeders">Action11</NavDropdown.Item>
@@ -162,7 +162,7 @@ export default function HeaderNavbar(){
                                 </div>
                             </div>
                         </NavDropdown>
-                        <NavDropdown  title="PAGES" id="collasible-nav-dropdown" show={isShown6} onMouseEnter={()=>setIsShown6(true)}  onMouseLeave={()=>setIsShown6(false)}>
+                        <NavDropdown  title="PAGES" id="collasible-nav-dropdown" style={{marginLeft:"5%"}} show={isShown6} onMouseEnter={()=>setIsShown6(true)}  onMouseLeave={()=>setIsShown6(false)}>
                             <div className="row justify-content-center" style={{width:"800px",position:"relative"}}>
                                 <div className="col-3" id="openmain">
                                     <NavDropdown.Item href="/adminGeders">Action11</NavDropdown.Item>
@@ -200,8 +200,8 @@ export default function HeaderNavbar(){
       color: white;
       
     } 
-    #hoverText{
-    padding: 2%;
+    #hoverText{   
+    padding: 20px;
     background-color: black !important;
     }
       #collasible-nav-dropdown:hover {

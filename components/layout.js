@@ -46,7 +46,7 @@ return(
         <div className="justify-content-center">
             <CardComponents/>
             <GridComponent/>
-            <ProductsColCardAndImage/>
+            {/*<ProductsColCardAndImage/>*/}
         </div>
 
     </div>
