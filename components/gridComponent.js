@@ -67,7 +67,7 @@ export default function GridComponent(){
                                             {/*<p style=" border-bottom-color:#FF0000; border-bottom-style:dashed; border-bottom-width:2px; border-top-color:#000099; border-top-style:solid; border-top-width:1px;"> Un ejemplo de estilos de bordes </p>*/}
                                             <b>Flat 65% Off*</b> on Hand Tools
                                         </h2>
-                                        <h6  style={{width: "85%",borderStyle:"dashed"}} className="bg-warning  p-2 text-danger" >COUPON CODE: 2134</h6>
+                                        <h6  style={{width: "85%",borderStyle:"dashed", borderColor:"black"}} className="bg-warning text-center p-2 text-danger" >COUPON CODE: 2134</h6>
 
                                     </div>
                                 </div>

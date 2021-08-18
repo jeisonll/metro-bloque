@@ -26,7 +26,7 @@ export default function HeaderNavbar(){
 
         <>
 
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"  id="hoverText">
+            <Navbar  expand="lg" bg="dark" variant="dark"  id="hoverText">
                 <Navbar.Brand href="/movies">    </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -200,21 +200,19 @@ export default function HeaderNavbar(){
       color: white;
       
     } 
+    #hoverText{
+    padding: 2%;
+    background-color: black !important;
+    }
       #collasible-nav-dropdown:hover {
        
       color: #FFCE33;
       
     } 
     
-    
-
-
-        
       
                        
 `}
-                </style>
-            </Navbar>
-        </>
+                </style></Navbar></>
     )
 }

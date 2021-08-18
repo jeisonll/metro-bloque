@@ -17,7 +17,7 @@ function ModalHome() {
     return (
         <>
             <Modal className=" position-relative"  toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
-                <div className=" modal-header">
+                <div className=" border border-end border-white position-absolute" style={{marginLeft:"94%", zIndex:"100", marginTop:"1%"}}>
 
                     <button
                         aria-label="Close"
@@ -30,9 +30,7 @@ function ModalHome() {
                 </div>
                 <ModalBody><Image src={profilePic} alt="imagen publicidad"/>
                 </ModalBody>
-                <ModalFooter>
 
-                </ModalFooter>
 
                 <style jsx global>
                     {`
