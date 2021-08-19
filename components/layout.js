@@ -11,6 +11,7 @@ import CardComponents from "./cardComponents";
 import GridComponent from "./gridComponent";
 import HeaderHome from "./headerHome";
 import ProductsColCardAndImage from "./productsColCardAndImage";
+import PublicityComponent from "./publicityComponent";
 
 export default function Layout() {
 return(
@@ -39,6 +40,7 @@ return(
         </div>
             <Slaider/>
             <GridCategory/>
+            <PublicityComponent/>
             <div className="justify-content-center">
                 <CardComponents/>
                 <GridComponent/>
