@@ -3,8 +3,8 @@ import React from "react";
 export default function GridCategory(){
     return(
         <div>
-            <h3 className="text-center ">SHOP BY CATEGORIES</h3>
-            <h2 className="text-center mb-4"><b >------------------------------</b></h2>
+            <h4 id="textTitle" className="text-center " ><b>SHOP BY CATEGORIES</b></h4>
+            <h2 className="text-center mb-4"><img src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/uline.png" alt="separtor"/></h2>
             <div className="container mt-2 mb-2">
                 <div className="row">
                     <div className="col-3 text-center mx-5 mb-5 ">
@@ -109,6 +109,11 @@ export default function GridCategory(){
                     </div>
                 </div>
             </div>
+            <style jsx global>
+                {`
+                
+                `}
+            </style>
         </div>
     )
 }

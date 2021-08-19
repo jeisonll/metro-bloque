@@ -15,15 +15,13 @@ import ProductsColCardAndImage from "./productsColCardAndImage";
 export default function Layout() {
 return(
     <div>
+
+        <body>
         <ModalHome/>
         <header className="container d-flex p-4"><HeaderHome/></header>
         <div className="justify-content-center position-sticky top-0 "style={{zIndex:"100"}} id="navbar">
             <HeaderNavbar/>
         </div>
-        <div className="image-fixed z-index-2">
-        </div>
-
-
         <div>
             <div className="container mt-2 mb-2">
                 <div className="row">
@@ -34,20 +32,22 @@ return(
                         <b>25%</b> off your first order
                     </div>
                     <div className="col-4 text-center ">
-                       <b>Secure</b> Checkout Guarantee
+                        <b>Secure</b> Checkout Guarantee
                     </div>
                 </div>
             </div>
         </div>
-
-
             <Slaider/>
             <GridCategory/>
-        <div className="justify-content-center">
-            <CardComponents/>
-            <GridComponent/>
-            <ProductsColCardAndImage/>
-        </div>
+            <div className="justify-content-center">
+                <CardComponents/>
+                <GridComponent/>
+                <ProductsColCardAndImage/>
+            </div>
+        </body>
+
+
+
 
     </div>
 

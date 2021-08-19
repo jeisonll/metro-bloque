@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
 
 export default function CardComponents(){
     const [isHover1,setIsHover1]=useState(false)
@@ -7,8 +9,8 @@ export default function CardComponents(){
     const [isHover4,setIsHover4]=useState(false)
     return(
         <div>
-            <h3 className="text-center ">FEATURED PRODUCTS</h3>
-            <h2 className="text-center mb-4"><b >------------------------------</b></h2>
+            <h4 className="text-center "><b>FEATURED PRODUCTS</b></h4>
+            <h2 className="text-center mb-4"><h2 className="text-center mb-4"><img src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/uline.png" alt="separtor"/></h2></h2>
             <div className="container  mt-2"style={{marginLeft:"9.%",marginRight:"auto"}}>
                 <div className="row ">
                     <div className="col-3 text-center mb-5  " >
@@ -19,12 +21,14 @@ export default function CardComponents(){
                                 <img id="imageHoverImg" src="https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product32_9b1e0e9a-d130-4c20-b1ef-2ae3183d314d_medium.jpg" className="position-relative"  alt="image"/>
 
                                 <div className="card-body">
-                                    <h5 className="card-title ">REDUCERS & ADAPTERS</h5>
+                                    <h5 className="card-title "><b>REDUCERS & ADAPTERS</b></h5>
                                     <p className="card-text">
                                         Nam tempus turpis at metus scelerisque placerat....</p>
                                 </div>
-                                <ul className="list-group list-group-flush">
-                                    Rs. 100.00 Rs. 500.00
+                                <ul className="list-group list-group-flush text-danger">
+                                   <b>Rs. 100.00 Rs. 500.00</b>
+                                    <div className="d-inline-block"><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/>
+                                    </div>
                                 </ul>
                                 <div className="card-body " id="ClassHover">
                                     <button className="btn rounded-5 opacity-100 text-white" >ADD TO CARD</button>
@@ -39,12 +43,14 @@ export default function CardComponents(){
                                 )}
                                 <img id="imageHoverImg" src="https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product19_medium.jpg" className="position-relative"  alt="image"/>
                                 <div className="card-body">
-                                    <h5 className="card-title ">THE VISE</h5>
+                                    <h5 className="card-title "><b>THE VISE</b></h5>
                                     <p className="card-text">
                                         Nam tempus turpis at metus scelerisque placerat...</p>
                                 </div>
-                                <ul className="list-group list-group-flush">
-                                    Rs. 753.00
+                                <ul className="list-group list-group-flush text-danger">
+                                    <b>Rs. 753.00</b>
+                                    <div className="d-inline-block"><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/>
+                                    </div>
                                 </ul>
                                 <div className="card-body" id="ClassHover">
                                     <button className="btn opacity-100 text-white" >ADD TO CARD</button>
@@ -60,12 +66,14 @@ export default function CardComponents(){
                                 )}
                                 <img id="imageHoverImg" src="https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product22_medium.jpg" className="position-relative"  alt="image"/>
                                 <div className="card-body">
-                                    <h5 className="card-title ">HACKSAW BLADES KIT</h5>
+                                    <h5 className="card-title "><b>HACKSAW BLADES KIT</b></h5>
                                     <p className="card-text">
                                         Nam tempus turpis at metus scelerisque placerat....</p>
                                 </div>
-                                <ul className="list-group list-group-flush">
-                                    Rs. 389.00
+                                <ul className="list-group list-group-flush text-danger">
+                                   <b>Rs. 389.00</b>
+                                    <div className="d-inline-block"><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/>
+                                    </div>
                                 </ul>
                                 <div className="card-body" id="ClassHover">
                                     <button className="btn opacity-100 text-white" >ADD TO CARD</button>
@@ -80,12 +88,14 @@ export default function CardComponents(){
                                 )}
                                 <img id="imageHoverImg" src="https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product23_medium.jpg" className="position-relative"  alt="image"/>
                                 <div className="card-body">
-                                    <h5 className="card-title ">MONKEY SPANNERS</h5>
+                                    <h5 className="card-title "><b>MONKEY SPANNERS</b></h5>
                                     <p className="card-text">
                                         Nam tempus turpis at metus scelerisque placerat....</p>
                                 </div>
-                                <ul className="list-group list-group-flush">
-                                    Rs. 199.00
+                                <ul className="list-group list-group-flush text-danger">
+                                    <b>Rs. 199.00</b>
+                                    <div className="d-inline-block"><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/>
+                                    </div>
                                 </ul>
                                 <div className="card-body" id="ClassHover">
                                     <button className="btn opacity-100 text-white" >ADD TO CARD</button>
@@ -98,7 +108,7 @@ export default function CardComponents(){
             <style jsx global>
                 {`
                 
-                #ClassHover:hover{
+                #imageHover:hover #ClassHover{
                 background-color: black !important;
                 }
                 #imageHoverImg {
