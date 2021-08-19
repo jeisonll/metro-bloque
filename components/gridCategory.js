@@ -4,8 +4,8 @@ export default function GridCategory(){
     return(
         <div>
             <h4 id="textTitle" className="text-center " ><b>SHOP BY CATEGORIES</b></h4>
-            <h2 className="text-center mb-4"><img src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/uline.png" alt="separtor"/></h2>
-            <div className="container mt-2 mb-2">
+            <h2 className="text-center "><img src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/uline.png" alt="separtor"/></h2>
+            <div className="container mt-2 ">
                 <div className="row">
                     <div className="col-3 text-center mx-5 mb-5 ">
                        <img className="rounded-circle border border-3 border-white bg-warning p-1 position-absolute" src="https://cdn.shopify.com/s/files/1/0179/0453/3558/files/icon1_e1081865-e0c0-4f82-bc8c-ac0fc28cad9a_50x50.png" alt="icono"/>
