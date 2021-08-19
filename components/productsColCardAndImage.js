@@ -144,6 +144,9 @@ export default function ProductsColCardAndImage(){
             </div>
             <style jsx global>
                 {`
+
+
+            
             #colorblack h6{
             color: black;
             font-weight: bold;
@@ -151,7 +154,8 @@ export default function ProductsColCardAndImage(){
             #colorblack p{
             color: #D70606;
             font-weight: bold;
-            }               
+            }   
+                        
 `}
             </style>
         </div>

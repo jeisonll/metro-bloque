@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import { Navbar, Nav, NavItem, NavDropdown } from 'react-bootstrap';
 import {faSearch,faShoppingCart, faHeart,faSignInAlt,faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -14,7 +14,27 @@ import ProductsColCardAndImage from "./productsColCardAndImage";
 import PublicityComponent from "./publicityComponent";
 
 export default function Layout() {
-return(
+const [values,setValues]=useState("hidden")
+    const [offset, setOffset] = useState(0);
+
+
+
+
+    useEffect(() => {
+        window.onscroll = () => {
+            setOffset(window.pageYOffset)
+            console.log(window.pageYOffset);
+            if (document.documentElement.scrollTop > 1200&&document.documentElement.scrollTop < 1500) {
+                setValues("visible");
+
+            }
+        }
+
+    }, []);
+
+
+
+            return(
     <div>
 
         <body>
@@ -39,8 +59,11 @@ return(
             </div>
         </div>
             <Slaider/>
+
             <GridCategory/>
-            <PublicityComponent/>
+        <PublicityComponent
+            visible={values}
+        />
             <div className="justify-content-center">
                 <CardComponents/>
                 <GridComponent/>
