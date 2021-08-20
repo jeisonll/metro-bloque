@@ -13,6 +13,7 @@ import GridComponent from "./gridComponent";
 import HeaderHome from "./headerHome";
 import ProductsColCardAndImage from "./productsColCardAndImage";
 import PublicityComponent from "./publicityComponent";
+import ProductCatalog from "./productCatalog";
 
 export default function Layout({tamaño}) {
 const [values,setValues]=useState("hidden")
@@ -42,16 +43,12 @@ const [values,setValues]=useState("hidden")
 
 
             return(
-    <div className="" style={tamaño}>
+    <>
 
 
         <ModalHome/>
-        <header className="container d-flex p-4 "><HeaderHome/></header>
+        <HeaderHome/>
         <HeaderNavbar/>
-
-        <div className="justify-content-center position-sticky top-0 "style={{zIndex:"100"}} id="navbar">
-
-        </div>
         <div>
             <div className="container mt-2 mb-2">
                 <div className="row">
@@ -67,25 +64,20 @@ const [values,setValues]=useState("hidden")
                 </div>
             </div>
         </div>
-            <Slaider/>
-
-            <GridCategory
-                visible={valuesCategory}
-            />
-        <PublicityComponent
-            visible={values}
-        />
-            <div className="justify-content-center">
-                <CardComponents/>
-                <GridComponent/>
-                <ProductsColCardAndImage/>
-            </div>
+        <Slaider/>
+        {/*<GridCategory visible={valuesCategory}/>*/}
+        <PublicityComponent visible={values}/>
+        <CardComponents/>
+        {/*<GridComponent/>*/}
+        <ProductsColCardAndImage/>
+        <ProductCatalog/>
 
 
 
 
 
-    </div>
+
+    </>
 
 )
 }

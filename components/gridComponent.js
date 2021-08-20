@@ -96,20 +96,8 @@ export default function GridComponent(){
                     @media screen and (max-width: 900px){
                     .row{
                     width: 100% ;
-                    
-                    }@media screen and (max-width: 900px){
-                    #imagen{
-                    width: 10px ;
-                    
                     }
-                    Image{
-                    width: 10px ;
-                    
                     }
-                    
-                    
-                    
-                  }
                       
                                     
 `}
