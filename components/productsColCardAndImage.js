@@ -15,9 +15,9 @@ export default function ProductsColCardAndImage(){
         <div className="container justify-content-center mt-5 " >
             <div className="row justify-content-center   ">
                 <div className="col col-lg-6  ">
-                    {/*<div className=" justify-content-center ">*/}
-                    {/*    <h4 className=""><b>NEW PRODUCTS</b></h4>*/}
-                    {/*    <h2 className=" mb-4"><img src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/uline1.png" alt="separator"/></h2>*/}
+                    <div className=" justify-content-center ">
+                        <h4 className=""><b>NEW PRODUCTS</b></h4>
+                        <h2 className=" mb-4"><img src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/uline1.png" alt="separator"/></h2>
                     {/*    <div className="container justify-content-center " style={{width: "100%"}}>*/}
                     {/*        <div className="row justify-content-center " >*/}
                     {/*            <div className="col col-lg-3 justify-content-center mb-5" >*/}
@@ -120,7 +120,7 @@ export default function ProductsColCardAndImage(){
 
                     {/*        </div>*/}
                     {/*    </div>*/}
-                    {/*</div>*/}
+                    </div>
                 <ProductCatalog/>
                 </div>
 
