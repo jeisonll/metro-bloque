@@ -14,6 +14,7 @@ import HeaderHome from "./headerHome";
 import ProductsColCardAndImage from "./productsColCardAndImage";
 import PublicityComponent from "./publicityComponent";
 import ProductCatalog from "./productCatalog";
+import CardComponentBlock from "./cardComponentBlock";
 
 export default function Layout({tamaño}) {
 const [values,setValues]=useState("hidden")
@@ -67,7 +68,7 @@ const [values,setValues]=useState("hidden")
         <Slaider/>
         {/*<GridCategory visible={valuesCategory}/>*/}
         <PublicityComponent visible={values}/>
-        <CardComponents/>
+        <CardComponentBlock/>
         {/*<GridComponent/>*/}
         <ProductsColCardAndImage/>
         {/*<ProductCatalog/>*/}

@@ -110,11 +110,11 @@ export default function CardComponents(){
                 #imageHover:hover #ClassHover{
                 background-color: black !important;
                 }
-                #imageHoverImg {
-
-                background-image: url("https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product32_9b1e0e9a-d130-4c20-b1ef-2ae3183d314d_medium.jpg")
-
-                }
+                //#imageHoverImg {
+                //
+                //background-image: url("https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product32_9b1e0e9a-d130-4c20-b1ef-2ae3183d314d_medium.jpg")
+                //
+                //}
                 #imageHover:hover{
                 opacity: 100%;
                 }
