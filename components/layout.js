@@ -70,7 +70,7 @@ const [values,setValues]=useState("hidden")
         <CardComponents/>
         {/*<GridComponent/>*/}
         <ProductsColCardAndImage/>
-        <ProductCatalog/>
+        {/*<ProductCatalog/>*/}
 
 
 
