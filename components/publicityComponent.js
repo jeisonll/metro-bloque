@@ -3,9 +3,9 @@ export default function PublicityComponent({visible}){
 
         <> {console.log(visible)}
          <div className=" container my-5">
-             <div className="row justify-content-center">
+             <div className="row justify-content-center"style={{width:"100%"}}>
 
-                 <div className="col-6 position-relative">
+                 <div className="contenedor col-6 position-relative">
                      <div className={visible}>
                          <h3 className="position-absolute"><b>Best Offer Today !</b></h3>
                          <p className="bg-warning position-absolute p-2">NEW COLLECTION TOOLS</p>
@@ -15,7 +15,7 @@ export default function PublicityComponent({visible}){
 
                      </div>
                  </div>
-                 <div className="col-6 position-relative">
+                 <div className="contenedor2 col-6 position-relative">
                      <div className={visible}>
                          <h3 className="position-absolute"><b>Plumber’s Picks!</b></h3>
                          <p className="bg-warning position-absolute p-2">LIMITED STOCK OFFERS</p>
@@ -30,45 +30,30 @@ export default function PublicityComponent({visible}){
                   .hidden {
                    display: none;
                   }
+                  .contenedor{
+                  width: 50%;
+                  float: left;
+                  }.contenedor2{
+                  width: 50%;
+                  float: right;
+                  }
+                  @media screen and (max-width: 800px){
+                    .contenedor{
+                    width: 100%;
+                    flex-direction: column;
+                    padding-bottom: 10px;
+                    }.contenedor2{
+                    width: 100%;
+                    flex-direction: column;
+                    }
+                    
+                  }
                   
-                  .visible {
-                      //width: 315px;
-                      //display: flex;
-                      //justify-content: space-between;
-                      //align-items: center;
-                      //position: absolute; 
-                      //z-index: 3;
-                      //left: 20%; 
+                  .visible{
                     animation-name: visible;
                     animation-duration: 1s;
                     animation-timing-function: linear;
                     animation-fill-mode: forwards;
-                  }
-//.visible img {
-//  border: 3px solid #f0ff54;
-//  border-radius: 50%;
-//}
-//.visible div {
-//  width: 220px;
-//  height: 50px;
-//  background-color: white;
-//  opacity: 0.7;
-//  clip-path: polygon(10% 0%, 100% 1%, 100% 100%, 10% 100%, 0% 50%);
-//  border-right: 8px solid #f0ff54;
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//}
-//.visible p {
-//  font-family: 'Inconsolata', monospace;
-//  font-size: 15px;
-//  padding-left: 10px;
-//}
-                  .visible{
-                  animation-name: visible;
-animation-duration: 1s;
-animation-timing-function: linear;
-animation-fill-mode: forwards;
                   }
                   h3{
                    color: black;

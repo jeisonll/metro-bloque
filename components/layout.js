@@ -2,6 +2,7 @@ import React, {Component, useEffect, useState} from 'react';
 import { Navbar, Nav, NavItem, NavDropdown } from 'react-bootstrap';
 import {faSearch,faShoppingCart, faHeart,faSignInAlt,faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 import Slaider from "./slider";
 import "../public/image.png"
 import HeaderNavbar from "./headerNavbar";
@@ -13,21 +14,27 @@ import HeaderHome from "./headerHome";
 import ProductsColCardAndImage from "./productsColCardAndImage";
 import PublicityComponent from "./publicityComponent";
 
-export default function Layout() {
+export default function Layout({tamaño}) {
 const [values,setValues]=useState("hidden")
-    const [offset, setOffset] = useState(0);
+    const [valuesCategory, setvaluesCategory] = useState("hidden");
 
 
 
 
     useEffect(() => {
+        console.log(tamaño)
         window.onscroll = () => {
-            setOffset(window.pageYOffset)
+
             console.log(window.pageYOffset);
             if (document.documentElement.scrollTop > 1200&&document.documentElement.scrollTop < 1500) {
                 setValues("visible");
 
             }
+            if (document.documentElement.scrollTop > 500&&document.documentElement.scrollTop < 1200) {
+                setvaluesCategory("visible");
+
+            }
+
         }
 
     }, []);
@@ -35,13 +42,15 @@ const [values,setValues]=useState("hidden")
 
 
             return(
-    <div>
+    <div className="" style={tamaño}>
 
-        <body>
+
         <ModalHome/>
-        <header className="container d-flex p-4"><HeaderHome/></header>
+        <header className="container d-flex p-4 "><HeaderHome/></header>
+        <HeaderNavbar/>
+
         <div className="justify-content-center position-sticky top-0 "style={{zIndex:"100"}} id="navbar">
-            <HeaderNavbar/>
+
         </div>
         <div>
             <div className="container mt-2 mb-2">
@@ -60,7 +69,9 @@ const [values,setValues]=useState("hidden")
         </div>
             <Slaider/>
 
-            <GridCategory/>
+            <GridCategory
+                visible={valuesCategory}
+            />
         <PublicityComponent
             visible={values}
         />
@@ -69,7 +80,7 @@ const [values,setValues]=useState("hidden")
                 <GridComponent/>
                 <ProductsColCardAndImage/>
             </div>
-        </body>
+
 
 
 

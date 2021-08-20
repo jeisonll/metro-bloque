@@ -1,5 +1,5 @@
 import {Nav, Navbar, NavDropdown} from "react-bootstrap";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 
 
 
@@ -18,15 +18,16 @@ export default function HeaderNavbar(){
     const [isShown6, setIsShown6] = useState(false);
 
 
+
     const handleClick = (e) => {
 
     }
     return(
 
 
-        <>
+        <div>
 
-            <Navbar  expand="lg" bg="dark" variant="dark"  id="hoverText">
+            <Navbar  expand="xl" bg="dark" variant="dark"  id="hoverText">
                 <Navbar.Brand href="/movies">    </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -200,9 +201,12 @@ export default function HeaderNavbar(){
       color: white;
       
     } 
-    #hoverText{   
-    padding: 20px;
+    #hoverText{  
     background-color: black !important;
+    
+    width: 100%;
+    padding: 20px;
+    
     }
       #collasible-nav-dropdown:hover {
        
@@ -213,6 +217,6 @@ export default function HeaderNavbar(){
       
                        
 `}
-                </style></Navbar></>
+                </style></Navbar></div>
     )
 }

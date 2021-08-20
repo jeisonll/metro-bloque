@@ -5,7 +5,7 @@ import React from "react";
 export default function HeaderHome(){
     return(
         <>
-            <div className="position-relaivte " >
+            <div className="position-relaivte" >
                 <a href="/movies" ><img  src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/logo.png"   alt="logo"/></a>
             </div>
             <div className="container d-flex justify-content-end" >
