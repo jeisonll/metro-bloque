@@ -125,7 +125,7 @@ export default function GridCategory({visible}){
 
                 </div>
             </div>
-            <style jsx global>
+            <style jsx global >
                 {`
                   .hidden {
                    display: none;
@@ -137,9 +137,7 @@ export default function GridCategory({visible}){
                     animation-timing-function: linear;
                     animation-fill-mode: forwards;
                   }
-                  h4{
-                  width: 10%;
-                  }
+                  
                  @keyframes visible {
                   0% {
                     opacity: 0.5;
