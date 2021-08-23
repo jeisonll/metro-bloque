@@ -6,7 +6,7 @@ export default function GridComponent(){
 
     return(
         <>
-            <div className="">
+            <div className="container">
                 <div className="row justify-content-center" >
                     <div className="col-12 col-sm-3 bg-primary border border-2 border-white position-relative " id="imageGrid">
                         <div className="row justify-content-center mt-5 ">
@@ -83,24 +83,19 @@ export default function GridComponent(){
                 <style jsx global>
                     {`
 
-                      
-                    #imageGrid{ 
-                    
-                    position: center
-                    }
-                    
-                    .row{marginLeft:"10%"}
-                    #imageGrid:hover{
-                    padding-inline-start:10%;
-                    top:10%;
-                    transition: 2s;
-                  //  background: url("");
-                    } 
-                    @media screen and (max-width: 900px){
-                    .row{
-                    width: 100% ;
-                    }
-                    }
+                    //  
+                    //#imageGrid{ 
+                    //
+                    //position: center
+                    //}
+                  //  
+                   
+                   
+                  //  @media screen and (max-width: 900px){
+                  //  .row{
+                  //  width: 100% ;
+                  //  }
+                  //  }
                       
                                     
 `}

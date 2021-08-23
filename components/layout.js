@@ -69,9 +69,9 @@ const [values,setValues]=useState("hidden")
         <GridCategory visible={valuesCategory}/>
         <PublicityComponent visible={values}/>
         <CardComponentBlock/>
-        {/*<GridComponent/>*/}
+        <GridComponent/>
         <ProductsColCardAndImage/>
-        <ProductCatalog/>
+        {/*<ProductCatalog/>*/}
         <CardComponents/>
 
 
