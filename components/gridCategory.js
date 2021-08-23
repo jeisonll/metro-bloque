@@ -10,21 +10,21 @@ export default function GridCategory({visible}){
 
                     <div className="grid1 col-11 col-sm-5 col-lg-3 text-center mx-lg-2 mb-5 ">
                         <div className={visible}>
-                        <img className="rounded-circle mx-3 border border-3 border-white bg-warning p-1 position-absolute" src="https://cdn.shopify.com/s/files/1/0179/0453/3558/files/icon1_e1081865-e0c0-4f82-bc8c-ac0fc28cad9a_50x50.png" alt="icono"/>
+                            <img className="rounded-circle mx-3 border border-3 border-white bg-warning p-1 position-absolute" src="https://cdn.shopify.com/s/files/1/0179/0453/3558/files/icon1_e1081865-e0c0-4f82-bc8c-ac0fc28cad9a_50x50.png" alt="icono"/>
 
                             <h4 className="d-inline-block bg-dark text-white p-2 rounded-2 my-2 mx-5" style={{width: "70%"}}>POWER TOOLS</h4>
-                        <div className="row mx-5 mx-lg-0">
-                            <div className="col-12 col-lg-6 text-center">
-                                <a className="table-hover"><h6>9 meters inch tap</h6></a>
-                                <a className="table-hover"><h6>A pair of brushes</h6></a>
-                                <a className="table-hover"><h6>Carpentry tools set</h6></a>
-                                <a className="table-hover"><h6>Clamps & Reducers</h6></a>
-                                <a className="table-hover"><h6>Cutting Pliers Set</h6></a>
+                            <div className="row mx-5 mx-lg-0">
+                                <div className="col-12 col-lg-6 text-center">
+                                    <a className="table-hover"><h6>9 meters inch tap</h6></a>
+                                    <a className="table-hover"><h6>A pair of brushes</h6></a>
+                                    <a className="table-hover"><h6>Carpentry tools set</h6></a>
+                                    <a className="table-hover"><h6>Clamps & Reducers</h6></a>
+                                    <a className="table-hover"><h6>Cutting Pliers Set</h6></a>
+                                </div>
+                                <div className="col-11 col-lg-6">
+                                    <a><img style={{width:"100%"}} src="https://cdn.shopify.com/s/files/1/0179/0453/3558/files/img1_400x.png?v=1569563524" alt="taladro"/></a>
+                                </div>
                             </div>
-                            <div className="col-11 col-lg-6">
-                                <a><img style={{width:"100%"}} src="https://cdn.shopify.com/s/files/1/0179/0453/3558/files/img1_400x.png?v=1569563524" alt="taladro"/></a>
-                            </div>
-                        </div>
 
                         </div>
 
@@ -149,7 +149,7 @@ export default function GridCategory({visible}){
                   }
                   100% {
                     opacity: 1;
-                    transform: translateX(30px);
+                    transform: translateX(10px);
                   }}
                   @media (max-width: 768px) {
                       .grid1, grid2,grid3 {

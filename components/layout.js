@@ -66,13 +66,13 @@ const [values,setValues]=useState("hidden")
             </div>
         </div>
         <Slaider/>
-        {/*<GridCategory visible={valuesCategory}/>*/}
+        <GridCategory visible={valuesCategory}/>
         <PublicityComponent visible={values}/>
         <CardComponentBlock/>
         {/*<GridComponent/>*/}
         <ProductsColCardAndImage/>
-        {/*<ProductCatalog/>*/}
-
+        <ProductCatalog/>
+        <CardComponents/>
 
 
 
