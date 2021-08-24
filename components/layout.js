@@ -29,11 +29,12 @@ const [values,setValues]=useState("hidden")
 
             console.log(window.pageYOffset);
             if (document.documentElement.scrollTop > 1200&&document.documentElement.scrollTop < 1500) {
-                setValues("visible");
+                // setValues("visible");
 
             }
-            if (document.documentElement.scrollTop > 500&&document.documentElement.scrollTop < 1200) {
+            if (document.documentElement.scrollTop > 300&&document.documentElement.scrollTop < 1000) {
                 setvaluesCategory("visible");
+                setValues("visible");
 
             }
 
@@ -66,8 +67,9 @@ const [values,setValues]=useState("hidden")
             </div>
         </div>
         <Slaider/>
-        <GridCategory visible={valuesCategory}/>
         <PublicityComponent visible={values}/>
+        <GridCategory visible={valuesCategory}/>
+
         <CardComponentBlock/>
         <GridComponent/>
         <ProductsColCardAndImage/>

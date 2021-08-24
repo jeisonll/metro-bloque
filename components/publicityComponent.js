@@ -30,8 +30,8 @@ export default function PublicityComponent({visible}){
                          {/*    <img style={{width:"100%"}} src="https://cdn.shopify.com/s/files/1/0179/0453/3558/files/img5_850x.jpg?v=1569400934" alt="imagen publicidad"/>*/}
                          {/*</div>*/}
                          <h3 className="position-absolute "><b>Best Offer Today!</b></h3>
-                         <p className="bg-warning position-absolute p-2">NEW COLLECTION TOOLS</p>
-                         <h5 className="position-absolute "><b className="text-danger">30%</b><b>off New Trending</b></h5>
+                         <p className="bg-warning position-absolute d-none d-sm-block p-2">NEW COLLECTION TOOLS</p>
+                         <h5 className="position-absolute d-none d-sm-block "><b className="text-danger">30%</b><b>off New Trending</b></h5>
                          <button className="btn btn-warning position-absolute"><b>SHOP NOW</b></button>
 
 
@@ -48,8 +48,8 @@ export default function PublicityComponent({visible}){
 
 
                              <h3 className="position-absolute "><b>Plumber’s Picks!</b></h3>
-                             <p className="bg-warning position-absolute p-2">LIMITED STOCK OFFERS</p>
-                             <h5 className="position-absolute "><b className="text-danger">42% </b>off Best Deals</h5>
+                             <p className="bg-warning position-absolute p-2 d-none d-sm-block">LIMITED STOCK OFFERS</p>
+                             <h5 className="position-absolute d-none d-sm-block"><b className="text-danger">42% </b>off Best Deals</h5>
                              <button className="btn btn-warning position-absolute"><b>SHOP NOW</b></button>
 
 
