@@ -8,7 +8,7 @@ export default function CardComponentBlock(){
     const [isHover3,setIsHover3]=useState(false)
     const [isHover4,setIsHover4]=useState(false)
     return(
-        <div className="">
+        <div className="mb-5">
 
             <h2 className="text-center mb-4"><img src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/uline.png" alt="separtor"/></h2>
             <h3 className="text-center"><b>FEATURED PRODUCTS</b></h3>

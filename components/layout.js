@@ -29,15 +29,15 @@ const [values,setValues]=useState("hidden")
 
             console.log(window.pageYOffset);
             if (document.documentElement.scrollTop > 1200&&document.documentElement.scrollTop < 1500) {
-                // setValues("visible");
+                setValues("visible");
 
             }
             if (document.documentElement.scrollTop > 300&&document.documentElement.scrollTop < 1000) {
                 setvaluesCategory("visible");
-                setValues("visible");
+
 
             }
-
+            setValues("visible");
         }
 
     }, []);
@@ -57,20 +57,19 @@ const [values,setValues]=useState("hidden")
                     <div className="col-4 text-center border-end ">
                         Free Shipping <b>worldwide No Minimum</b>
                     </div>
-                    <div className="col-4 text-center border-end">
+                    <div className="col-4 text-center border-end d-none d-md-block">
                         <b>25%</b> off your first order
                     </div>
-                    <div className="col-4 text-center ">
+                    <div className="col-4 text-center d-none d-lg-block">
                         <b>Secure</b> Checkout Guarantee
                     </div>
                 </div>
             </div>
         </div>
         <Slaider/>
-        <PublicityComponent visible={values}/>
-        <GridCategory visible={valuesCategory}/>
-
         <CardComponentBlock/>
+        <GridCategory visible={valuesCategory}/>
+        <PublicityComponent visible={values}/>
         <GridComponent/>
         <ProductsColCardAndImage/>
         {/*<ProductCatalog/>*/}
