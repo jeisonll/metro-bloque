@@ -85,7 +85,7 @@ export default function CardComponentBlock() {
                                                             style={{width: "90%", zIndex: "99"}} alt="image"/>
                                         )}
                                         <img id="imageHoverImg"
-                                             src="https://metrobloque.com/colores/img/sample_slides/adoquin6gris.jpg"
+                                             src={product.image}
                                              className="position-relative" alt="image"/>
                                         <div className="card-body">
                                             <h5 className="card-title "><b>{product.name}</b></h5>
