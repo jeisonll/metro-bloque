@@ -7,6 +7,68 @@ export default function CardComponents(){
     const [isHover2,setIsHover2]=useState(false)
     const [isHover3,setIsHover3]=useState(false)
     const [isHover4,setIsHover4]=useState(false)
+
+    const array = [{
+        id:1,
+        name:"Adoquin 6 (Gris)",
+        image:"https://metrobloque.com/colores/img/sample_slides/adoquin6gris.jpg",
+        medidas:"6x10x20",
+        tipo:"Peatonal",
+        stars:"5"
+    },{
+        id:2,
+        name:"Adoquin 8 (Gris)",
+        image:"https://metrobloque.com/colores/img/sample_slides/adoquin8gris.jpg",
+        medidas:"8x10x20",
+        tipo:"Vehicular",
+        stars:"2"
+    },{
+        id:3,
+        name:"Adoquin 12 (Gris)",
+        image:"https://metrobloque.com/colores/img/sample_slides/adoquin12gris.jpg",
+        medidas:"12x10x20",
+        tipo:"Trafico Pesado",
+        stars:"3"
+
+    },{
+        id:4,
+        name:"Gramoquin",
+        image:"https://metrobloque.com/img/products/gramoquin.jpg",
+        medidas:"8x25x25",
+        tipo:"Adoquin Ecologico",
+        stars:"3"
+    },{
+        id:5,
+        name:"Adoquin 10 (Gris)",
+        image:"https://metrobloque.com/colores/img/sample_slides/adoquin6gris.jpg",
+        medidas:"8x10x25",
+        tipo:"Trafico Pesado",
+        stars:"5"
+    },{
+        id:6,
+        name:"Adoquin 11 (Gris)",
+        image:"https://metrobloque.com/colores/img/sample_slides/adoquin8gris.jpg",
+        medidas:"8x25x20",
+        tipo:"Trafico Pesado",
+        stars:"5"
+    },{
+        id:7,
+        name:"Adoquin 13 (Gris)",
+        image:"https://metrobloque.com/colores/img/sample_slides/adoquin12gris.jpg",
+        medidas:"8x20x25",
+        tipo:"Trafico Pesado",
+        stars:"4"
+    },{
+        id:8,
+        name:"Gramoquin 2",
+        image:"https://metrobloque.com/img/products/gramoquin.jpg",
+        medidas:"9x25x25",
+        tipo:"Adoquin Ecologico",
+        stars:"5"
+    }
+    ]
+
+
     return(
         <div>
             <h4 className="text-center "><b>FEATURED PRODUCTS</b></h4>
