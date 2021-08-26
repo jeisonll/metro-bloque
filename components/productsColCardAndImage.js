@@ -5,12 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {CONFIG_FILE} from "next/constants";
 
 export default function ProductsColCardAndImage(){
-    const [isHover1,setIsHover1]=useState(false)
-    const [isHover2,setIsHover2]=useState(false)
+
     const [isHover3,setIsHover3]=useState(false)
-    const [isHover4,setIsHover4]=useState(false)
-    const [isHover5,setIsHover5]=useState(false)
-    const [isHover6,setIsHover6]=useState(false)
+
 
     const array3=[{
         id:1,
@@ -55,6 +52,13 @@ export default function ProductsColCardAndImage(){
         ,image:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product32_9b1e0e9a-d130-4c20-b1ef-2ae3183d314d_medium.jpg"
         ,image2:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product1_medium.jpg"
     }]
+    const numStars = (stars) => {
+        const contStars=[];
+        for (let i=0;i<stars;i++){
+            contStars.push(<FontAwesomeIcon icon={faStar} style={{color: "orange"}}/>)
+        }
+        return contStars;
+    }
     return(
         <div className="container justify-content-center mt-5 " >
             <div className="row justify-content-center   ">
@@ -67,14 +71,15 @@ export default function ProductsColCardAndImage(){
                                 {array3.map((product)=>(
                                 <div key={product.id} className="col col-lg-4 justify-content-center mb-5" >
                                         <div  className="row justify-content-center" >
-                                            <div className="card" id="imageHover"  style={{width: "10rem"}} onMouseEnter={()=>setIsHover1(true)} onMouseLeave={()=>setIsHover1(false)} >
-                                                {!isHover1&&(<img className="card-img-top position-absolute" src={product.image} style={{width:"85%",zIndex:"90"}}alt="Card image cap"/>
-                                                )}
-                                                <img className="card-img-top" src={product.image2} alt="Card image cap"/>
+                                            <div className="card" id="imageHover"  style={{width: "10rem"}} >
+                                                <div id="imagen123"> <img id="imagen" src={product.image}
+                                                                          onMouseEnter={e => (e.currentTarget.src = product.image2)}
+                                                                          onMouseLeave={e => (e.currentTarget.src = product.image  )}
+                                                                          className="img-fluid" alt="image"/></div>
                                                 <div className="card-body" id="colorblack">
                                                     <h6 className="card-title">{product.name}</h6>
                                                     <p className="card-text">Rs. {product.valor}</p>
-                                                    <FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/><FontAwesomeIcon icon={faStar} style={{color:"orange"}}/>
+                                                    <p>{numStars(product.stars)}</p>
                                                 </div>
                                             </div>
 
@@ -111,34 +116,34 @@ export default function ProductsColCardAndImage(){
             </div>
             <style jsx global>
                 {`
-
-                  .contenedor1{
-                  width: 50%;
-                  float: left;
-                  }
+                   
+                  //.contenedor1{
+                  //width: 50%;
+                  //float: left;
+                  //}
+                  //
+                  //.contenedor4{
+                  //width: 50%;
+                  //float: right;
+                  //}
                   
-                  .contenedor4{
-                  width: 50%;
-                  float: right;
-                  }
-                  
-                  @media screen and (max-width: 600px){
-                    .contenedor1{
-                    width: 100%;
-                    padding-bottom: 10px;
-                    }.contenedor4{
-                    width: 100%;
-                    }
-                    
-                  }
-            #colorblack h6{
-            color: black;
-            font-weight: bold;
-            }   
-            #colorblack p{
-            color: #D70606;
-            font-weight: bold;
-            }   
+            //      @media screen and (max-width: 600px){
+            //        .contenedor1{
+            //        width: 100%;
+            //        padding-bottom: 10px;
+            //        }.contenedor4{
+            //        width: 100%;
+            //        }
+            //        
+            //      }
+            //#colorblack h6{
+            //color: black;
+            //font-weight: bold;
+            //}   
+            //#colorblack p{
+            //color: #D70606;
+            //font-weight: bold;
+            //}   
                         
 `}
             </style>

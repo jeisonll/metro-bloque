@@ -66,10 +66,10 @@ export default function GridComponent(){
                             </div>
                         </div>
                         <div className="row ">
-                            <div className="col-12    bg-warning border border-2 border-white position-relative" id="imageGrid">
+                            <div className="col-12    bg-warning border border-2 border-white position-relative" id="contentImageGrid">
                                 <div className=""  >
-                                    <div className="position-absolute"id="imageGrid" style={{paddingInlineStart:"60%",top:"0"}}>
-                                        <img style={{width: "100%"}} src="https://ftmapp-production.s3.amazonaws.com/uploads/product/picture/1756/large_retina_GWS22230.png" alt="hola"/>
+                                    <div className="position-absolute"id="contentImageGrid" style={{paddingInlineStart:"60%",top:"0"}}>
+                                        <img id="ImageGrid" style={{width: "100%"}} src="https://ftmapp-production.s3.amazonaws.com/uploads/product/picture/1756/large_retina_GWS22230.png" alt="hola"/>
                                     </div>
                                     <div className="align-content-center "style={{margin:"20%",left:"10%", color:"black"}}>
                                         <h2 className="title" ><b>Flat 65% Off*</b> on Hand Tools</h2>
@@ -83,6 +83,12 @@ export default function GridComponent(){
                 <style jsx global>
                     {`
 
+                    #contentImageGrid:hover #ImageGrid{
+                    transform: translate(-10px,10px);
+                    
+                    
+                    transition: 1s;
+                    }
                     //  
                     //#imageGrid{ 
                     //

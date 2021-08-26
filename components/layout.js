@@ -54,13 +54,13 @@ const [values,setValues]=useState("hidden")
         <div>
             <div className="container mt-2 mb-2">
                 <div className="row">
-                    <div className="col-4 text-center border-end ">
+                    <div className="col-12  col-md-6 col-lg-4 text-center border-end ">
                         Free Shipping <b>worldwide No Minimum</b>
                     </div>
-                    <div className="col-4 text-center border-end d-none d-md-block">
+                    <div className="ccol-12  col-md-6 col-lg-4 text-center border-end d-none d-md-block">
                         <b>25%</b> off your first order
                     </div>
-                    <div className="col-4 text-center d-none d-lg-block">
+                    <div className="col-lg-4 text-center d-none d-lg-block">
                         <b>Secure</b> Checkout Guarantee
                     </div>
                 </div>
