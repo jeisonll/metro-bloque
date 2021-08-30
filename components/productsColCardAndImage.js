@@ -3,62 +3,16 @@ import React, {useState} from "react";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {CONFIG_FILE} from "next/constants";
+import numStars from "./starsComponent";
+import CardMinis from "./componensPrimaryRow/cardMinis";
 
 export default function ProductsColCardAndImage(){
 
     const [isHover3,setIsHover3]=useState(false)
 
 
-    const array3=[{
-        id:1,
-        name:"THE VISE",
-        valor:"753.00",
-        stars:"4"
-        ,image:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product32_9b1e0e9a-d130-4c20-b1ef-2ae3183d314d_medium.jpg"
-        ,image2:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product1_medium.jpg"
-    },{
-        id:2,
-        name:"THE VISE",
-        valor:"753.00",
-        stars:"5"
-        ,image:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product32_9b1e0e9a-d130-4c20-b1ef-2ae3183d314d_medium.jpg"
-        ,image2:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product1_medium.jpg"
-    },{
-        id:3,
-        name:"THE VISE",
-        valor:"753.00",
-        stars:"5"
-        ,image:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product32_9b1e0e9a-d130-4c20-b1ef-2ae3183d314d_medium.jpg"
-        ,image2:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product1_medium.jpg"
-    },{
-        id:4,
-        name:"THE VISE",
-        valor:"753.00",
-        stars:"5"
-        ,image:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product32_9b1e0e9a-d130-4c20-b1ef-2ae3183d314d_medium.jpg"
-        ,image2:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product1_medium.jpg"
-    },{
-        id:5,
-        name:"THE VISE",
-        valor:"753.00",
-        stars:"5"
-        ,image:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product32_9b1e0e9a-d130-4c20-b1ef-2ae3183d314d_medium.jpg"
-        ,image2:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product1_medium.jpg"
-    },{
-        id:6,
-        name:"THE VISE",
-        valor:"753.00",
-        stars:"5"
-        ,image:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product32_9b1e0e9a-d130-4c20-b1ef-2ae3183d314d_medium.jpg"
-        ,image2:"https://cdn.shopify.com/s/files/1/0179/0453/3558/products/product1_medium.jpg"
-    }]
-    const numStars = (stars) => {
-        const contStars=[];
-        for (let i=0;i<stars;i++){
-            contStars.push(<FontAwesomeIcon icon={faStar} style={{color: "orange"}}/>)
-        }
-        return contStars;
-    }
+
+
     return(
         <div className="container justify-content-center mt-5 " >
             <div className="row justify-content-center   ">
@@ -67,27 +21,7 @@ export default function ProductsColCardAndImage(){
                         <h4 className=""><b>NEW PRODUCTS</b></h4>
                         <h2 className=" mb-4"><img src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/uline1.png" alt="separator"/></h2>
                         <div className="container justify-content-center " style={{width: "100%"}}>
-                            <div className="row justify-content-center " >
-                                {array3.map((product)=>(
-                                <div key={product.id} className="col col-lg-4 justify-content-center mb-5" >
-                                        <div  className="row justify-content-center" >
-                                            <div className="card" id="imageHover"  style={{width: "10rem"}} >
-                                                <div id="imagen123"> <img id="imagen" src={product.image}
-                                                                          onMouseEnter={e => (e.currentTarget.src = product.image2)}
-                                                                          onMouseLeave={e => (e.currentTarget.src = product.image  )}
-                                                                          className="img-fluid" alt="image"/></div>
-                                                <div className="card-body" id="colorblack">
-                                                    <h6 className="card-title">{product.name}</h6>
-                                                    <p className="card-text">Rs. {product.valor}</p>
-                                                    <p>{numStars(product.stars)}</p>
-                                                </div>
-                                            </div>
-
-                                        </div></div>
-                                    ))}
-
-                            </div>
-
+                        <CardMinis/>
                         </div>
 
                     </div>
