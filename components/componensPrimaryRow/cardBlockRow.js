@@ -1,34 +1,41 @@
 import React, {useEffect, useState} from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faStar} from "@fortawesome/free-solid-svg-icons";
-import  numStars from "../starsComponent"
-import {array} from "../array/array";
-import {getProductServices} from "../../services/ProductServices";
+import Pagination from "../Pagination";
 import CardBlock from "./componentPrimary/CardBlock";
+import axios from "axios";
 export default function CardBlockRow(){
 
-    const [products,setProduts]=useState([]);
+    const [products,setProducts]=useState([]);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(4);
 
-    useEffect(()=>{
-        // listarMovies();
-        fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then(json=>setProduts(json))
-    },[])
-    
-    // const listarMovies = () => {
-    //   getProductServices().then((res)=>{
-    //       if (res.json())
-    //
-    //
-    //
-    //   })
-    //
-    // }
+    useEffect(() => {
+        const fetchPosts = async () => {
+            setLoading(true);
+            const res = await axios.get('https://fakestoreapi.com/products');
+            setProducts(res.data);
+            setLoading(false);
+        };
+
+        fetchPosts();
+    }, []);
+
+
+
+
+    // Get current posts
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = products.slice(indexOfFirstPost, indexOfLastPost);
+
+    // Change page
+    const paginate = pageNumber => setCurrentPage(pageNumber);
+
+
 
     return(
         <>
-            {products.map((product) => (
+            {currentPosts.map((product) => (
                     <div className="col mt-3 text-center " key={product.id}>
                         <div className="row ">
                             <CardBlock
@@ -38,16 +45,20 @@ export default function CardBlockRow(){
                             price={product.price}
 
                             />
+
                         </div>
-                        <style jsx global >
-                            {`
-                                                 
-                            `}
-                        </style>
+
                     </div>
                 )
             )
             }
+            <div ><Pagination
+                postsPerPage={postsPerPage}
+                totalPosts={products.length}
+                paginate={paginate}/>
+            </div>
+
+
         </>
     )
 }

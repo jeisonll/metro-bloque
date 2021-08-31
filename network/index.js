@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const http = axios.create({
-    baseURL:"https://fakestoreapi.com/"
+    baseURL:"https://fakestoreapi.com"
 })
 
 http.interceptors.response.use((res=>{

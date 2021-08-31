@@ -2,7 +2,8 @@ import React from "react";
 
 
 export default function CardBlock({title,image,category,price}){
-return(
+
+    return(
     <div className="card   "  id="imageHover" style={{width: "18rem"}}>
         <div id="imagen123">
             <img id="imagen" src={image}
@@ -10,8 +11,8 @@ return(
                 // onMouseLeave={e => (e.currentTarget.src = product.image)}
                  className="img-fluid" alt="image"/>
         </div>
-        <div className="card-body  "style={{alignItems:"center"}}>
-            <h5 className="card-title "><b>{title}</b></h5>
+        <div className="card-body   "style={{alignItems:"center"}}>
+            <h5 className="card-title align-items-center"><b>{title}</b></h5>
             <p className="card-text">
                 {category}<br/>
                 price<br/>

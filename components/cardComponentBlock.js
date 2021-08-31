@@ -1,25 +1,20 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
 import CardBlockRow from "./componensPrimaryRow/cardBlockRow";
 
 export default function CardComponentBlock() {
-    const [isHover1, setIsHover1] = useState(false)
-    const [isHover2, setIsHover2] = useState(false)
-    const [isHover3, setIsHover3] = useState(false)
-    const [isHover4, setIsHover4] = useState(false)
 
 
-
-    const [newImg, setNewImg] = useState(null);
     return (
         <div className="mb-5">
             <h2 className="text-center mb-4"><img
                 src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/uline.png" alt="separtor"/></h2>
             <h3 className="text-center"><b>FEATURED PRODUCTS</b></h3>
             <div className="container  mt-2 justify-content-center">
-                <div className="row  row-cols-2 row-cols-md-2 row-cols-lg-4 mx-5 mx-md-0 mx-lg-0">
+                <div className="row justify-content-center row-cols-2 row-cols-md-2 row-cols-lg-4 mx-5 mx-md-0 mx-lg-0 ">
                     <CardBlockRow/>
+
                 </div>
             </div>
             <style jsx global>
