@@ -4,9 +4,9 @@ import React from "react";
 export default function CardBlock({title,image,category,price}){
 
     return(
-    <div className="card   "  id="imageHover" style={{width: "18rem"}}>
+    <div className="card   "  id="imageHover" style={{height: "32rem",width:"18rem"}}>
         <div id="imagen123">
-            <img id="imagen" src={image}
+            <img id="imagen" src={image} style={{height:"12em"}}
                 // onMouseEnter={e => (e.currentTarget.src = product.image2)}
                 // onMouseLeave={e => (e.currentTarget.src = product.image)}
                  className="img-fluid" alt="image"/>
