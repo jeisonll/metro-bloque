@@ -71,7 +71,7 @@ export default function HeaderNavbar(){
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto justify-content-center d-flex text-white table-hover">
                         <Link href="/">
-                            <Nav.Link id="collasible-nav-dropdown" href="/">HOME</Nav.Link>
+                            <a>HOME</a>
                         </Link>
 
                         <div >
