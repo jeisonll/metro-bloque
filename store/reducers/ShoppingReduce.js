@@ -57,13 +57,13 @@ export function ShoppingReduce(state = shoppingInitialState, action) {
             // const itemInCart = state.cart.find(item => item.id === action.payload);
             return {
                 ...state,
-                cart: state.cart.filter(item => item.id !== action.payload),total:[]
+                cart: state.cart.filter(item => item.id !== action.payload),total: totalValue(state.cart)
             }
         }
         case TYPES_CART.CLEAR_CART:
             return {
                 ...state,
-                cart: []
+                cart: [],total:[]
             }
         default:
             return state;
