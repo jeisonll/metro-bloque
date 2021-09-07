@@ -44,7 +44,7 @@ export default function  ShoppingCart ({addToCard,clearCart,deleteFromCart}) {
                             <h5 className="card-title">{product.title}</h5>
                             <p className="card-text">This is a wider card with supporting text below as a natural
                                 lead-in to additional content. This content is a little bit longer.</p>
-                            <p className="card-text"><small className="text-muted">${product.price}.00</small></p>
+                            <p className="card-text"><small className="text-muted">${product.price}.00 X {product.quantity}</small></p>
                             <p className="card-text">Total ${product.price*product.quantity}.00</p>
 
                             <button onClick={()=>addToCard(product)} className="btn btn-primary">add other</button>

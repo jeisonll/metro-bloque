@@ -20,58 +20,18 @@ export default function HeaderNavbar(){
 
 
 
-    const handleClick = (e) => {
 
-    }
     return(
 
 
         <div>
-            {/*<Nav className="navbar navbar-expand-lg navbar-dark bg-dark">*/}
-            {/*    <div className="container-xl">*/}
-            {/*        <Link href="/">*/}
-            {/*            <a className="navbar-brand">GyanBlog</a>*/}
-            {/*        </Link>*/}
-            {/*        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#Example07XL" aria-controls="Example07XL" aria-expanded="false" aria-label="Toggle navigation">*/}
-            {/*            <span className="navbar-toggler-icon"></span>*/}
-            {/*        </button>*/}
-
-            {/*        <div className="collapse navbar-collapse" id="Example07XL">*/}
-            {/*            <ul className="navbar-nav mr-auto">*/}
-            {/*                <li className="nav-item active">*/}
-            {/*                    <Link href="/">*/}
-            {/*                        <a className="nav-link">Home <span className="sr-only">(current)</span></a>*/}
-            {/*                    </Link>*/}
-            {/*                </li>*/}
-            {/*                <li className="nav-item">*/}
-            {/*                    <Link href="/newpages">*/}
-            {/*                        <a className="nav-link">Articles</a>*/}
-            {/*                    </Link>*/}
-            {/*                </li>*/}
-            {/*                <li className="nav-item">*/}
-            {/*                    <Link href="/write">*/}
-            {/*                        <a className="nav-link">Write</a>*/}
-            {/*                    </Link>*/}
-            {/*                </li>*/}
-            {/*            </ul>*/}
-            {/*            <ul className="navbar-nav px-3">*/}
-            {/*                <li className="nav-item text-nowrap">*/}
-            {/*                    <Button className="nav-link">*/}
-            {/*                        Signup*/}
-            {/*                    </Button>*/}
-            {/*                </li>*/}
-            {/*            </ul>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</Nav>*/}
-
             <Navbar  expand="xl" bg="dark" variant="dark"  id="hoverText">
                 <Navbar.Brand href="/movies">    </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto justify-content-center d-flex text-white table-hover">
                         <Link href="/">
-                            <a>HOME</a>
+                            <a className="mt-2 text-white">HOME</a>
                         </Link>
 
                         <div >

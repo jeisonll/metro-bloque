@@ -2,8 +2,10 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart, faSearch, faShoppingCart, faSignInAlt, faUser} from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import Link from "next/link";
+import {useSelector} from "react-redux";
 
 export default function HeaderHome(){
+    const result = useSelector(stat => stat.ShoppingReduce.item);
     return(
         <div className="container  p-4">
             <div className="container">
@@ -33,7 +35,7 @@ export default function HeaderHome(){
                             </div>
                             <div className="col text-center p-2">
                                 <FontAwesomeIcon  className="text-dark" size="1x" icon={faShoppingCart}/>
-                                <Link href="/cart"><a className="me-2 mb "> CART <b>(0)</b> </a></Link>
+                                <Link href="/cart"><a className="me-2 mb "> CART <b>({result})</b> </a></Link>
                             </div>
                         </div>
                     </div>
