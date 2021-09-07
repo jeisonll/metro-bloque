@@ -57,6 +57,6 @@ export default function  ShoppingCart ({addToCard,clearCart,deleteFromCart}) {
             </div>
 </>
         ))}
-        <div><h2 className="display-2">total a pagar ${state.total}.00</h2></div>
+        <div><h2 className="display-4">Total a Pagar ${state.total}.00</h2></div>
     </>
 )}
