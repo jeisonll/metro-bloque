@@ -1,6 +1,8 @@
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {TYPES_CART} from "../store/actions/ShoppingAction";
 import {useDispatch, useSelector} from "react-redux";
+import {faBroom, faStar} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default function  ShoppingCart ({addToCard,clearCart,deleteFromCart}) {
 
@@ -25,10 +27,10 @@ export default function  ShoppingCart ({addToCard,clearCart,deleteFromCart}) {
 
 
     return(
-    <>
-        <h2>Shopping Cart</h2>
-        <h3>Products</h3>
-        <button className="btn btn-secondary" onClick={clearCart}>Clear Cart</button>
+    <div className="text-center">
+        <h2 className="display-4">Shopping Cart</h2>
+        <h3 className="display-6">Products</h3>
+        <button className="btn btn-lg btn-secondary mt-5 mb-2" onClick={clearCart}><FontAwesomeIcon icon={faBroom} style={{color:"orange"}}/> Clear Cart</button>
         {state.cart.map((product)=>(
 
 <>
@@ -47,8 +49,8 @@ export default function  ShoppingCart ({addToCard,clearCart,deleteFromCart}) {
                             <p className="card-text"><small className="text-muted">${product.price}.00 X {product.quantity}</small></p>
                             <p className="card-text">Total ${product.price*product.quantity}.00</p>
 
-                            <button onClick={()=>addToCard(product)} className="btn btn-primary">add other</button>
-                            <button onClick={()=>deleteFromCart(product.id)} className="btn btn-secondary">delete one</button>
+                            <button onClick={()=>addToCard(product)} className="btn btn-primary mx-1">ADD OTHER</button>
+                            <button onClick={()=>deleteFromCart(product.id)} className="btn btn-secondary mx-1">DELETE ONE</button>
 
                         </div>
                     </div>
@@ -57,6 +59,6 @@ export default function  ShoppingCart ({addToCard,clearCart,deleteFromCart}) {
             </div>
 </>
         ))}
-        <div><h2 className="display-4">Total a Pagar ${state.total}.00</h2></div>
-    </>
+        <div><h2 className="display-6">Total a Pagar ${state.total}.00</h2></div>
+    </div>
 )}

@@ -40,9 +40,8 @@ export default function Cart(){
     return(
        <div className="container">
            <div className="row">
-               <div className="col-12 col-md-8 col-lg-6">
-                   <h2>cat Shopping</h2>
-                   <h2>{}</h2>
+               <div className="col-12 col-md-8 col-lg-6 mt-5">
+
 
                    <ShoppingCart cart={state}
                                  addToCard={addToCart}
@@ -50,7 +49,7 @@ export default function Cart(){
                                  deleteFromCart={deleteFromCart}
                    />
                </div>
-               <div className="col-12 col-md-4 col-lg-6">
+               <div className="col-12 col-md-4 col-lg-6 mt-5">
                    <h2>Shopping</h2>
                    <h2>{}</h2>
                    <div className="row justify-content-center d-none d-md-flex row-cols-md-1 row-cols-lg-2 mx-5 mx-md-0 mx-lg-0 ">
