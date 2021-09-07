@@ -49,7 +49,7 @@ export function ShoppingReduce(state = shoppingInitialState, action) {
                 }
                 : {
                     ...state,
-                    cart: state.cart.filter(item => item.id !== itemToDelete.id),total: totalValue(action.payload)
+                    cart: state.cart.filter(item => item.id !== itemToDelete.id),total: totalValue(state.cart)
                 }
 
         }
@@ -57,7 +57,7 @@ export function ShoppingReduce(state = shoppingInitialState, action) {
             // const itemInCart = state.cart.find(item => item.id === action.payload);
             return {
                 ...state,
-                cart: state.cart.filter(item => item.id !== action.payload)
+                cart: state.cart.filter(item => item.id !== action.payload),total:[]
             }
         }
         case TYPES_CART.CLEAR_CART:
