@@ -63,7 +63,7 @@ export default function Layout({tamaño}) {
                 </div>
             </div>
             <Slaider/>
-            <Car/>
+            {/*<Car/>*/}
             <CardComponentBlock/>
             <GridCategory visible={valuesCategory}/>
             <PublicityComponent visible={values}/>
