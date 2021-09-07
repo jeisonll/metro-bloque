@@ -1,6 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart, faSearch, faShoppingCart, faSignInAlt, faUser} from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import Link from "next/link";
 
 export default function HeaderHome(){
     return(
@@ -32,7 +33,7 @@ export default function HeaderHome(){
                             </div>
                             <div className="col text-center p-2">
                                 <FontAwesomeIcon  className="text-dark" size="1x" icon={faShoppingCart}/>
-                                <a className="me-2 mb "> CART</a>
+                                <Link href="/cart"><a className="me-2 mb "> CART <b>(0)</b> </a></Link>
                             </div>
                         </div>
                     </div>

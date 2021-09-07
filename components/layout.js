@@ -11,10 +11,14 @@ import HeaderHome from "./headerHome";
 import ProductsColCardAndImage from "./productsColCardAndImage";
 import PublicityComponent from "./publicityComponent";
 import CardComponentBlock from "./cardComponentBlock";
+import Car from "../pages/cart";
+import {useDispatch, useSelector} from "react-redux";
+import {setProducts} from "../store/actions/actionProducts";
 
 export default function Layout({tamaño}) {
     const [values, setValues] = useState("hidden")
     const [valuesCategory, setvaluesCategory] = useState("hidden");
+
 
 
     useEffect(() => {
@@ -42,8 +46,7 @@ export default function Layout({tamaño}) {
 
 
             <ModalHome/>
-            <HeaderHome/>
-            <HeaderNavbar/>
+
             <div>
                 <div className="container mt-2 mb-2">
                     <div className="row">
@@ -60,6 +63,7 @@ export default function Layout({tamaño}) {
                 </div>
             </div>
             <Slaider/>
+            <Car/>
             <CardComponentBlock/>
             <GridCategory visible={valuesCategory}/>
             <PublicityComponent visible={values}/>

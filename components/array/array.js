@@ -5,7 +5,8 @@ export const array = [{
     image2: "https://metrobloque.com/colores/img/sample_slides/adoquin8gris.jpg",
     medidas: "6x10x20",
     tipo: "Peatonal",
-    stars: "5"
+    stars: "5",
+    price:"100"
 }, {
     id: 2,
     name: "Adoquin 8 (Gris)",
@@ -13,7 +14,8 @@ export const array = [{
     image2: "https://metrobloque.com/colores/img/sample_slides/adoquin6gris.jpg",
     medidas: "8x10x20",
     tipo: "Vehicular",
-    stars: "2"
+    stars: "2",
+    price:"200"
 }, {
     id: 3,
     name: "Adoquin 12 (Gris)",
@@ -21,7 +23,8 @@ export const array = [{
     image2: "https://metrobloque.com/colores/img/sample_slides/adoquin6gris.jpg",
     medidas: "12x10x20",
     tipo: "Trafico Pesado",
-    stars: "3"
+    stars: "3",
+    price:"300"
 
 }, {
     id: 4,
@@ -30,7 +33,8 @@ export const array = [{
     image2: "https://metrobloque.com/colores/img/sample_slides/adoquin6gris.jpg",
     medidas: "8x25x25",
     tipo: "Adoquin Ecologico",
-    stars: "3"
+    stars: "3",
+    price:"400"
 }, {
     id: 5,
     name: "Adoquin 10 (Gris)",
@@ -38,7 +42,8 @@ export const array = [{
     image2: "https://metrobloque.com/colores/img/sample_slides/adoquin8gris.jpg",
     medidas: "8x10x25",
     tipo: "Trafico Pesado",
-    stars: "5"
+    stars: "5",
+    price:"500"
 }, {
     id: 6,
     name: "Adoquin 11 (Gris)",
@@ -46,7 +51,8 @@ export const array = [{
     image2: "https://metrobloque.com/colores/img/sample_slides/adoquin6gris.jpg",
     medidas: "8x25x20",
     tipo: "Trafico Pesado",
-    stars: "5"
+    stars: "5",
+    price:"600"
 }, {
     id: 7,
     name: "Adoquin 13 (Gris)",
@@ -54,7 +60,8 @@ export const array = [{
     image2: "https://metrobloque.com/colores/img/sample_slides/adoquin6gris.jpg",
     medidas: "8x20x25",
     tipo: "Trafico Pesado",
-    stars: "4"
+    stars: "4",
+    price:"700"
 }, {
     id: 8,
     name: "Gramoquin 2",
@@ -62,7 +69,8 @@ export const array = [{
     image2: "https://metrobloque.com/colores/img/sample_slides/adoquin6gris.jpg",
     medidas: "9x25x25",
     tipo: "Adoquin Ecologico",
-    stars: "5"
+    stars: "5",
+    price:"800"
 }
 ];
 
