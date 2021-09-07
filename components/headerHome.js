@@ -11,7 +11,9 @@ export default function HeaderHome(){
             <div className="container">
                 <div className="row text-center justify-content-center justify-content-lg-start ">
                     <div className="col-4 col-lg-3 p-3 p-md-3 p-lg-0">
-                        <a href="" ><img  src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/logo.png"   alt="logo"/></a>
+                        <Link href="/">
+                        <a  ><img  src="https://cdn.shopify.com/s/files/1/0179/0453/3558/t/4/assets/logo.png"   alt="logo"/></a>
+                        </Link>
                     </div>
                     <div className=" col-lg-3 ">
                     </div>

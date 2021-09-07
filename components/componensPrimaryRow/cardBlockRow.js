@@ -62,20 +62,20 @@ export default function CardBlockRow(){
 
     console.log(state)
 
-    // useEffect(() => {
-    //     // Get the item from local storage. JSON.parse(null) returns null rather than throws
-    //     // Get from local storage before setting it
-    //     const localTodos = JSON.parse(localStorage.getItem("Shopping Cart")) || [];
-    //     dispatchEvent({ type:TYPES_CART.ADD_DATA_CART, payload: localTodos });
-    // }, []);
+     useEffect(() => {
+        // Get the item from local storage. JSON.parse(null) returns null rather than throws
+        // Get from local storage before setting it
+        const localTodos = JSON.parse(localStorage.getItem("Shopping Cart"));
+        dispatchEvent({ type:TYPES_CART.ADD_DATA_CART, payload: localTodos });
+    }, []);
 
 
-    // useEffect(()=>{
-    //
-    //         if (state.cart) {
-    //             localStorage.setItem("Shopping Cart", JSON.stringify(state.cart || []));
-    //         }
-    // },[state])
+    useEffect(()=>{
+
+            if (state.cart) {
+                localStorage.setItem("Shopping Cart", JSON.stringify(state.cart || []));
+            }
+    },[state])
 
 
 

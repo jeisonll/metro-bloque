@@ -17,12 +17,12 @@ export default function  ShoppingCart ({addToCard,clearCart,deleteFromCart}) {
         const localTodos = JSON.parse(localStorage.getItem("Shopping Cart")) || [];
         dispatchEvent({ type:TYPES_CART.ADD_DATA_CART, payload: localTodos });
     }, []);
-    useEffect(()=>{
-
-        if (state.cart) {
-            localStorage.setItem("Shopping Cart", JSON.stringify(state.cart || []));
-        }
-    },[state])
+    // useEffect(()=>{
+    //
+    //     if (state.cart) {
+    //         localStorage.setItem("Shopping Cart", JSON.stringify(state.cart || []));
+    //     }
+    // },[state])
 
 
 
