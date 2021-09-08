@@ -12,12 +12,11 @@ export default function Cart(){
     const [loadingDelete, setLoadingDelete]=useState({});
     //function cart
     const addToCart=(product)=>{
-
-
         setLoading({[product.id]:true})
-        dispatchEvent({type:TYPES_CART.ADD_TO_CART,payload:product})
-
-        setTimeout(function(){ setLoading({[product.id]:false}); }, 3000);
+            setTimeout(function(){
+                dispatchEvent({type:TYPES_CART.ADD_TO_CART,payload:product});
+                setLoading({[product.id]:false});
+            }, 3000);
 
     }
     const clearCart=()=>{
@@ -27,11 +26,13 @@ export default function Cart(){
 
         if(all){
             dispatchEvent(({type:TYPES_CART.REMOVE_ALL_FROM_CART,payload:id}))
-
         }else{
             setLoadingDelete({[id]:true})
-            dispatchEvent({type:TYPES_CART.REMOVE_ONE_FROM_CART,payload:id})
-            setTimeout(function(){setLoadingDelete({[id]:false}); }, 3000);
+                setTimeout(function(){
+                    dispatchEvent({type:TYPES_CART.REMOVE_ONE_FROM_CART,payload:id});
+                    setLoadingDelete({[id]:false});
+                }, 3000);
+
         }
     }
 

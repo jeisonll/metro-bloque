@@ -60,8 +60,10 @@ export default function CardBlockRow() {
     //dispatch product for setting it
     const addToCart = (product) => {
         setLoadingButton({[product.id]:true})
-        dispatchEvent({type: TYPES_CART.ADD_TO_CART, payload: product})
-        setTimeout(function (){setLoadingButton({[product.id]:false});},3000)
+            setTimeout(function (){
+                dispatchEvent({type: TYPES_CART.ADD_TO_CART, payload: product})
+                setLoadingButton({[product.id]:false});
+            },3000)
     }
 
 

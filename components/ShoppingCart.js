@@ -42,7 +42,7 @@ export default function  ShoppingCart ({loading,loadingDelete,addToCard,clearCar
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <button onClick={()=>deleteFromCart(product.id)} className="btn btn-close end-50"style={{marginLeft:"93%"}}/>
+                            <button onClick={()=>deleteFromCart(product.id,true)} className="btn btn-close end-50"style={{marginLeft:"93%"}}/>
                             <h5 className="card-title">{product.title}</h5>
                             <p className="card-text">This is a wider card with supporting text below as a natural
                                 lead-in to additional content. This content is a little bit longer.</p>
