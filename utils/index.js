@@ -7,8 +7,8 @@ export function totalValue(cart) {
 }
 export function acounItem(cart) {
     let acum = 0;
-    cart.forEach((product,i) => {i===0?
-        acum += product.quantity * (i+1):acum += product.quantity * (i+1);
+    cart.forEach((product,i) => {
+        acum += product.quantity;
     })
     return acum;
 }

@@ -1,59 +1,58 @@
-import React, {useEffect, useReducer, useState} from "react";
+import React, {useState} from "react";
 import ShoppingCart from "../../components/ShoppingCart";
-import {shoppingInitialState, ShoppingReduce} from "../../redux/reducers/ShoppingReduce";
 import {TYPES_CART} from "../../store/actions/ShoppingAction";
 import {useDispatch, useSelector} from "react-redux";
-import CardBlock from "../../components/componensPrimaryRow/componentPrimary/CardBlock";
 import CardBlockRow from "../../components/componensPrimaryRow/cardBlockRow";
 
 export default function Cart(){
-
+    //state global and dispatch for reducer cart
     const state = useSelector(stat => stat.ShoppingReduce);
     const dispatchEvent = useDispatch();
-    // useEffect(() => {
-    //     // Get the item from local storage. JSON.parse(null) returns null rather than throws
-    //     // Get from local storage before setting it
-    //     const localTodos = JSON.parse(localStorage.getItem("Shopping Cart")) || [];
-    //     dispatchEvent({ type:TYPES_CART.ADD_DATA_CART, payload: localTodos });
-    // }, []);
-    // useEffect(()=>{
-    //
-    //     if (state.cart) {
-    //         localStorage.setItem("Shopping Cart", JSON.stringify(state.cart || []));
-    //     }
-    // },[state])
+    const [loading, setLoading]=useState({});
+    const [loadingDelete, setLoadingDelete]=useState({});
+    //function cart
     const addToCart=(product)=>{
 
+
+        setLoading({[product.id]:true})
         dispatchEvent({type:TYPES_CART.ADD_TO_CART,payload:product})
+
+        setTimeout(function(){ setLoading({[product.id]:false}); }, 3000);
 
     }
     const clearCart=()=>{
         dispatchEvent({type:TYPES_CART.CLEAR_CART})
     }
     const deleteFromCart=(id,all=false)=>{
+
         if(all){
             dispatchEvent(({type:TYPES_CART.REMOVE_ALL_FROM_CART,payload:id}))
+
         }else{
+            setLoadingDelete({[id]:true})
             dispatchEvent({type:TYPES_CART.REMOVE_ONE_FROM_CART,payload:id})
+            setTimeout(function(){setLoadingDelete({[id]:false}); }, 3000);
         }
     }
+
+
+    //return two col, first col shopping cart and second col card products
     return(
        <div className="container">
            <div className="row">
                <div className="col-12 col-md-8 col-lg-6 mt-5">
-
-
                    <ShoppingCart cart={state}
                                  addToCard={addToCart}
                                  clearCart={clearCart}
                                  deleteFromCart={deleteFromCart}
+                                 loading={loading}
+                                 loadingDelete={loadingDelete}
                    />
                </div>
                <div className="col-12 col-md-4 col-lg-6 mt-5">
                    <h2>Shopping</h2>
                    <h2>{}</h2>
                    <div className="row justify-content-center d-none d-md-flex row-cols-md-1 row-cols-lg-2 mx-5 mx-md-0 mx-lg-0 ">
-
                    <CardBlockRow/>
                    </div>
                </div>

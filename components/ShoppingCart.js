@@ -1,10 +1,10 @@
 import React, {useEffect} from "react";
 import {TYPES_CART} from "../store/actions/ShoppingAction";
 import {useDispatch, useSelector} from "react-redux";
-import {faBroom, faStar} from "@fortawesome/free-solid-svg-icons";
+import {faBroom, faSpinner, faStar} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-export default function  ShoppingCart ({addToCard,clearCart,deleteFromCart}) {
+export default function  ShoppingCart ({loading,loadingDelete,addToCard,clearCart,deleteFromCart}) {
 
     const state = useSelector(stat => stat.ShoppingReduce);
     const dispatchEvent = useDispatch();
@@ -42,15 +42,19 @@ export default function  ShoppingCart ({addToCard,clearCart,deleteFromCart}) {
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <button onClick={()=>deleteFromCart(product.id,true)} className="btn btn-close end-50"style={{marginLeft:"93%"}}/>
+                            <button onClick={()=>deleteFromCart(product.id)} className="btn btn-close end-50"style={{marginLeft:"93%"}}/>
                             <h5 className="card-title">{product.title}</h5>
                             <p className="card-text">This is a wider card with supporting text below as a natural
                                 lead-in to additional content. This content is a little bit longer.</p>
                             <p className="card-text"><small className="text-muted">${product.price}.00 X {product.quantity}</small></p>
                             <p className="card-text">Total ${product.price*product.quantity}.00</p>
 
-                            <button onClick={()=>addToCard(product)} className="btn btn-primary mx-1">ADD OTHER</button>
-                            <button onClick={()=>deleteFromCart(product.id)} className="btn btn-secondary mx-1">DELETE ONE</button>
+                            <button onClick={()=>addToCard(product)} className="btn btn-primary mx-1">
+                                {!loading[product.id]?"ADD OTHER":<FontAwesomeIcon className="fa-spin fa-2x d-block mx-3" icon={faSpinner} style={{color: "white"}}/>}
+                            </button>
+                            <button onClick={()=>deleteFromCart(product.id)} className="btn btn-secondary mx-1">
+                                {!loadingDelete[product.id]?"DELETE ONE":<FontAwesomeIcon className="fa-spin fa-2x d-block mx-3" icon={faSpinner} style={{color: "white"}}/>}
+                            </button>
 
                         </div>
                     </div>
