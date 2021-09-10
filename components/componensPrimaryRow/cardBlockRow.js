@@ -13,25 +13,11 @@ export default function CardBlockRow() {
     const [productsLocal, setProductsLocal] = useState([]);
     const [loading, setLoading] = useState(false);
     const [loadingButton, setLoadingButton] = useState(false);
-
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(4);
+
     const state = useSelector(stat => stat.ShoppingReduce);
     const dispatchEvent = useDispatch();
-
-    //useEffect http request products and dispatch add data for products in reducer
-    useEffect(() => {
-        const fetchPosts = async () => {
-            setLoading(true);
-            const res = await axios.get('https://fakestoreapi.com/products');
-            setProductsLocal(res.data);
-            dispatchEvent({type: TYPES_CART.ADD_DATA_DB, payload: res.data})
-            setTimeout(function(){setLoading(false); }, 10000);
-
-        };
-        fetchPosts();
-    }, []);
-
 
     // Get current posts
     const indexOfLastPost = currentPage * postsPerPage;
@@ -42,6 +28,17 @@ export default function CardBlockRow() {
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
 
+    //useEffect http request products and dispatch add data for products in reducer
+    useEffect(() => {
+        const fetchPosts = async () => {
+            setLoading(true);
+            const res = await axios.get('https://fakestoreapi.com/products');
+            setProductsLocal(res.data);
+            dispatchEvent({type: TYPES_CART.ADD_DATA_DB, payload: res.data})
+            setTimeout(function(){setLoading(false); }, 5000);
+        };
+        fetchPosts();
+    }, []);
     // Get the item from local storage. JSON.parse(null) returns null rather than throws
     // Get from local storage before setting it
     useEffect(() => {

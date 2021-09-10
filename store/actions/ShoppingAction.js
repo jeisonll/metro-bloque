@@ -10,16 +10,3 @@ export const TYPES_CART={
     CLEAR_CART:"CLEAR_CART"
 
 }
-// export const TYPES_PRODUCT={
-//     START_GET_PRODUCT:"START_GET_PRODUCT",
-//     SUCCESS_GET_PRODUCT:"SUCCESS_GET_PRODUCT"
-// }
-// export const startGetProduct=payload=>({
-//     type: TYPES_PRODUCT.START_GET_PRODUCT,
-//     ...payload
-// })
-//
-// const successGetProduct = payload=>({
-//     type: TYPES_PRODUCT.SUCCESS_GET_PRODUCT,
-//     ...payload
-// })
